@@ -49,7 +49,7 @@ EXPOSE 80
 
 # Health check — ตรวจสอบว่า nginx ยังทำงานอยู่
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD wget -qO- http://localhost:80/ || exit 1
+    CMD wget -qO- http://127.0.0.1:80/ || exit 1
 
 # รัน nginx ใน foreground (daemon off คือ Docker best practice)
 CMD ["nginx", "-g", "daemon off;"]
