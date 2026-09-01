@@ -1,0 +1,19 @@
+{
+  "name": "bookstore-backend",
+  "version": "0.1.0",
+  "description": "Book Store MERN Backend — Express API",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "cors": "^2.8.5",
+    "mongoose": "^8.8.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
