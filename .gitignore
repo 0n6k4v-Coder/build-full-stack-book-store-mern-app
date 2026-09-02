@@ -8,45 +8,69 @@
 # -----------------------------------------------------------------------------
 .env
 .env.*
+.env.local
 !.env.example
 !.env.*.example
 
 # -----------------------------------------------------------------------------
-# Node.js / npm
+# Node.js / npm (root + all subdirectories)
 # -----------------------------------------------------------------------------
 node_modules/
+**/node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-.npm
+.npm/
+**/.npm/
 .yarn/cache
 .yarn/unplugged
 .yarn/install-state.gz
 .pnp.*
 
 # -----------------------------------------------------------------------------
-# Build Outputs
+# Build Outputs (root + all subdirectories)
 # -----------------------------------------------------------------------------
 dist/
+**/dist/
 dist-ssr/
+**/dist-ssr/
 build/
+**/build/
 out/
+**/out/
 .output/
+**/.output/
 
 # Vite
 *.local
 
 # TypeScript
 *.tsbuildinfo
+**/*.tsbuildinfo
 
 # -----------------------------------------------------------------------------
-# Logs & Runtime
+# ESLint / Tooling Cache (root + all subdirectories)
+# -----------------------------------------------------------------------------
+.eslintcache
+**/.eslintcache
+.vite/
+**/.vite/
+.esbuild/
+**/.esbuild/
+.parcel-cache/
+**/parcel-cache/
+node_modules/.tmp/
+
+# -----------------------------------------------------------------------------
+# Logs & Runtime (root + all subdirectories)
 # -----------------------------------------------------------------------------
 logs/
+**/logs/
 *.log
 pids/
+**/pids/
 *.pid
 *.seed
 *.pid.lock
@@ -64,13 +88,12 @@ ehthumbs.db
 Desktop.ini
 
 # -----------------------------------------------------------------------------
-# Editors
+# Editors (root + all subdirectories)
 # -----------------------------------------------------------------------------
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-!.vscode/launch.json
+.vscode/
+**/.vscode/
 .idea/
+**/.idea/
 *.suo
 *.ntvs*
 *.njsproj
@@ -79,15 +102,26 @@ Desktop.ini
 *.swp
 
 # -----------------------------------------------------------------------------
-# Docker (ไม่ต้อง track ใน git — แต่ Dockerfile ควร track)
-# .dockerignore ไม่ต้องใส่ที่นี่ เพราะอยากให้ track ใน git
+# Docker — Dockerfiles and .dockerignore ARE tracked
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
-# Testing & Coverage
+# Testing & Coverage (root + all subdirectories)
 # -----------------------------------------------------------------------------
 coverage/
+**/coverage/
 .nyc_output/
+**/.nyc_output/
+
+# -----------------------------------------------------------------------------
+# Playwright (root + all subdirectories)
+# -----------------------------------------------------------------------------
+.playwright-mcp/
+**/playwright-mcp/
+playwright-report/
+**/playwright-report/
+test-results/
+**/test-results/
 
 # -----------------------------------------------------------------------------
 # Misc
